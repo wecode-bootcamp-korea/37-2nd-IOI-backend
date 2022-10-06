@@ -19,7 +19,7 @@
     },
     "homepage": "https://github.com/wecode-bootcamp-korea/37-1st-WePleats-backend#readme",
     "dependencies": {
-        "aws-sdk": "^2.1219.0",
+        "aws-sdk": "^2.1231.0",
         "axios": "^1.1.2",
         "bcrypt": "^5.0.1",
         "cors": "^2.8.5",
