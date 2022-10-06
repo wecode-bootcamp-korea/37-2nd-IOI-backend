@@ -3,8 +3,8 @@ function asyncWrap(asyncController) {
         try {
             await asyncController(req, res)
         }
-        catch(error) {
-            next(error);
+        catch(err) {
+            next(err);
         }
     };
 }
