@@ -13,6 +13,7 @@ const accessToken = async (req, res, next) => {
         req.userId = userId;
         return next()
     } catch(err) {
+        console.log(err)
         return res.status(400).json({ message: "INVALID_TOKEN"});
     }
 };
