@@ -9,7 +9,6 @@ const { errControl } = require('./middleware/errorControl');
 const app = express();
 const PORT = process.env.PORT;
 
-
 app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
