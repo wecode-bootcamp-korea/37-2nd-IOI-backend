@@ -11,3 +11,5 @@ db/schema.sql
 .DS_store
 
 /uploads
+
+*.csv
