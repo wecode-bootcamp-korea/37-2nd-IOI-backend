@@ -2,7 +2,7 @@
 CREATE TABLE coupons (
   id INT NOT NULL AUTO_INCREMENT,
   point DECIMAL(10, 2),
-  code INT UNIQUE,
+  code VARCHAR(20) UNIQUE,
   is_useable BOOLEAN,
   PRIMARY KEY (id)
 );
