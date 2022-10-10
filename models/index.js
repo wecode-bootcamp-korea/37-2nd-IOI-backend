@@ -4,6 +4,7 @@ const pageFiltersDao = require('./pageFiltersDao')
 const classesDao = require('./classesDao')
 const likesDao = require('./likesDao.js')
 const videoDao = require("./videoDao");
+const reviewDao = require("./reviewDao")
 
 module.exports = {
     userDao,
@@ -11,5 +12,6 @@ module.exports = {
     pageFiltersDao,
     classesDao,
     likesDao,
-    videoDao
+    videoDao,
+    reviewDao,
 }
