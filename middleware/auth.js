@@ -7,10 +7,11 @@ const accessToken = async (req, res, next) => {
         const access = jwt.verify(token, process.env.TOKKENSECRET);
         const userId = access.user_id;
         const user = await userDao.getUserById( userId )
+        
         if ( !user ) {
             return res.status(403).json({ message: "INVALID_USER"})
         }
-        req.userId = userId;
+        req.user = user;
         return next()
     } catch(err) {
         console.log(err)
