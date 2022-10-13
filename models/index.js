@@ -7,7 +7,7 @@ const videoDao = require("./videoDao");
 module.exports = {
     userDao,
     appDataSource,
-    pageFiltersDao,
     classesDao,
+    pageFiltersDao,
     videoDao,
 }
