@@ -49,7 +49,8 @@ const pageFilter = async (mainCategory, subCategory, sort, limit, offset) => {
     u.name as creatorName,
     classes.name as classTitle,
     classes.like_count,
-    classes.price
+    classes.price,
+    classes.id as classId
   From classes
   JOIN sub_categories subCate
     ON subCate.id=classes.sub_category_id

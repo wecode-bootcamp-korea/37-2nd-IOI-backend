@@ -18,13 +18,17 @@ const signInKakao = async (kakaoToken) => {
 
     let [user] = await userDao.getUserByKakaoId(kakaoId);
 
+
+
     if (!user) {
         await userDao.createUser(email, name, kakaoId, profileImage);
         [user] = await userDao.getUserById(kakaoId);
     }
+
+    console.log(user)
     
 
-    return jwt.sign({ kakao_id: user.kakao_id }, process.env.TOKKENSECRET);
+    return jwt.sign({ user_id: user.id }, process.env.TOKKENSECRET);
     
 };
 

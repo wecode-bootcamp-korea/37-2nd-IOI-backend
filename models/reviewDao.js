@@ -37,7 +37,6 @@ const getReviewByUserId = async( classId, userId ) => {
             [ classId, userId ]
         )
     } catch (err) {
-        console.log(err)
         const error = new Error(`INVALID_DATA_INPUT`);
         error.statusCode = 500;
         throw error;
@@ -55,7 +54,6 @@ const createReview = async ( userId, classId, content ) => {
             [ userId, classId, content ]
         )
     } catch (err) {
-        console.log(err)
         const error = new Error(`INVALID_DATA_INPUT`);
         error.statusCode = 500;
         throw error;

@@ -16,7 +16,8 @@ const getReview = asyncWrap(async (req, res) => {
 })
 
 const postReview = asyncWrap(async (req, res) => {
-    const { userId, classId, content } = req.body;
+    const { classId, content } = req.body;
+    const userId = req.userId
     const image = req.file
 
     if ( !classId || !content) {
@@ -31,8 +32,8 @@ const postReview = asyncWrap(async (req, res) => {
 })
 
 const editReview = asyncWrap(async (req, res) => {
-    console.log('body : ',req.body)
-    const { userId, reviewId, content, classId } = req.body;
+    const { reviewId, content, classId } = req.body;
+    const userId = req.userId
     const image = req.file
     if ( !reviewId || !content ) {
         const err =new Error("KEY_ERROR");
@@ -45,7 +46,7 @@ const editReview = asyncWrap(async (req, res) => {
 })
 
 const deleteReview = asyncWrap(async (req, res) => {
-    const { userId } = req.body;
+    const userId = req.userId
     const { classId, reviewId } = req.query;
     if ( !reviewId ) {
         const err = new Error("KEY_ERROR");
