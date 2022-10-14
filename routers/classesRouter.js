@@ -11,3 +11,6 @@ router.get('/admin/:classId', classesController.adminClass)
 router.get('', accessToken, classesController.getAllcreateClass)
 
 module.exports = router;        
+
+
+
